@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B//ih6OLpJP2L7gbDvGTsUHFsyKvpVRslPmkuroobOyrYRGpTY7Z/8ef2uKMamCH0iE7Hpt2ml1U1WXmzXdc6A==",
+  "dgSpecHash": "Lgk4vqaQQuSm2pd9mHQFiUAyqsFhCyB5gY3WOroGv+t0zIoPPzFU6RTCFtbhDe/95DxGRWHpjAY6V2n9iSRKaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marko\\Desktop\\M\\Inventory\\Inventory.csproj",
+  "projectFilePath": "C:\\Users\\Marko\\Desktop\\M\\Projekti\\Inventory-ASP.NET-CORE-MVC-SQL\\Inventory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marko\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.6\\microsoft.aspnetcore.jsonpatch.6.0.6.nupkg.sha512",

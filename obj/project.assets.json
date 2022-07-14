@@ -2005,11 +2005,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marko\\Desktop\\M\\Inventory\\Inventory.csproj",
+      "projectUniqueName": "C:\\Users\\Marko\\Desktop\\M\\Projekti\\Inventory-ASP.NET-CORE-MVC-SQL\\Inventory.csproj",
       "projectName": "Inventory",
-      "projectPath": "C:\\Users\\Marko\\Desktop\\M\\Inventory\\Inventory.csproj",
+      "projectPath": "C:\\Users\\Marko\\Desktop\\M\\Projekti\\Inventory-ASP.NET-CORE-MVC-SQL\\Inventory.csproj",
       "packagesPath": "C:\\Users\\Marko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marko\\Desktop\\M\\Inventory\\obj\\",
+      "outputPath": "C:\\Users\\Marko\\Desktop\\M\\Projekti\\Inventory-ASP.NET-CORE-MVC-SQL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marko\\AppData\\Roaming\\NuGet\\NuGet.Config",
