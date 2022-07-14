@@ -21,7 +21,11 @@ builder.Services.AddScoped<TransactionRepository>();
 builder.Services.AddScoped<TransactionService>();
 
 var app = builder.Build();
-
+using (var scope = app.Services.CreateScope())
+{
+    var dataContext = scope.ServiceProvider.GetRequiredService<InventoryContext>();
+    dataContext.Database.Migrate();
+}
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
