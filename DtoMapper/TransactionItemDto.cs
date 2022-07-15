@@ -1,5 +1,7 @@
 ﻿using Inventory.Models;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace Inventory.DtoMapper
 {

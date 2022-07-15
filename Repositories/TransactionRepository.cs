@@ -2,6 +2,8 @@
 using Inventory.Mapper;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Inventory.Repositories
 {

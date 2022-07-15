@@ -1,4 +1,6 @@
-﻿namespace Inventory.Models
+﻿using System;
+
+namespace Inventory.Models
 {
     public class Transaction
     {

@@ -22,7 +22,7 @@ namespace Inventory.Migrations
                 .HasAnnotation("ProductVersion", "6.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1, 1);
 
             modelBuilder.Entity("Inventory.DbModels.Category", b =>
                 {
@@ -31,7 +31,7 @@ namespace Inventory.Migrations
                         .HasColumnType("int")
                         .HasColumnName("CategoryID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1, 1);
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
@@ -51,7 +51,7 @@ namespace Inventory.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ItemID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ItemId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ItemId"), 1, 1);
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int")
@@ -86,7 +86,7 @@ namespace Inventory.Migrations
                         .HasColumnType("int")
                         .HasColumnName("StockID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StockId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StockId"), 1, 1);
 
                     b.Property<string>("StockName")
                         .IsRequired()
@@ -106,7 +106,7 @@ namespace Inventory.Migrations
                         .HasColumnType("int")
                         .HasColumnName("TransactionID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"), 1, 1);
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime");
@@ -133,7 +133,7 @@ namespace Inventory.Migrations
                         .HasColumnType("int")
                         .HasColumnName("TransactionItemID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionItemId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionItemId"), 1, 1);
 
                     b.Property<int>("ItemId")
                         .HasColumnType("int")
@@ -165,7 +165,7 @@ namespace Inventory.Migrations
                         .HasColumnType("int")
                         .HasColumnName("UnitID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UnitId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UnitId"), 1, 1);
 
                     b.Property<string>("UnitName")
                         .IsRequired()

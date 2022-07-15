@@ -1,4 +1,5 @@
 ﻿using Inventory.Models;
+using System;
 
 namespace Inventory.Mapper
 {

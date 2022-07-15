@@ -1,5 +1,7 @@
 ﻿using Inventory.DbModels;
 using Inventory.Mapper;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Inventory.Repositories
 {

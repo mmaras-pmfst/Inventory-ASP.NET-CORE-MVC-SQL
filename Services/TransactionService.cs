@@ -1,5 +1,6 @@
 ﻿using Inventory.Models;
 using Inventory.Repositories;
+using System.Collections.Generic;
 
 namespace Inventory.Services
 {
