@@ -15,6 +15,54 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Marko\Desktop\M\Projekti\Inventory-ASP.NET-CORE-MVC-SQL
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/App/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXEFwcFxDYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/App/Items.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXEFwcFxJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/App/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXEFwcFxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/App/Purchases.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXEFwcFxQdXJjaGFzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/App/Stocks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXEFwcFxTdG9ja3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/App/Transactions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXEFwcFxUcmFuc2FjdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXEhvbWVcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/Views/App/Categories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwXENhdGVnb3JpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/InventoryApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW52ZW50b3J5QXBwXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-qjfi49awit
 
 [C:/Users/Marko/Desktop/M/Projekti/Inventory-ASP.NET-CORE-MVC-SQL/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

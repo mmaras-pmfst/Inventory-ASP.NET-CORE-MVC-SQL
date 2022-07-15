@@ -1,0 +1,312 @@
+﻿@{
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Items</h1>
+    <button onclick="openForm()">Add New Item</button>
+   
+</div>
+<div>
+    <label for="categoryList">Category: </label>
+    <select name="categoryList" id="categoryList" oninput="filterTable()">
+        <option>All</option>
+
+    </select>
+
+</div>
+<div class="listsContainer">
+    <table id="itemTable">
+        <tr>
+            <th>Item Name</th>
+            <th>Category</th>
+            <th>Unit</th>
+            <th>Price(Kn)</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+    </table>
+</div>
+
+@* Add one Item *@
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <form>
+        <input placeholder="Item name..." id="itemName"/>
+        <label for="categoryList3">Category: </label>
+        <select name="categoryList3" id="categoryList3">
+        
+        </select>
+
+        <label for="unitList">Unit: </label>
+        <select name="unitList" id="unitList">
+            <option value="1">Kom</option>
+            <option value="2">kg</option>
+            <option value="3">Lit</option>
+
+        </select>
+
+        <input placeholder="Price..." id="price"/>
+        @*<input placeholder="Quantity..." id="qty"/>*@
+
+        <input class="itemForm-input" type="button" value="Add" id="addButton" onclick="addItem()" />
+
+
+    </form>
+  </div>
+  </div>
+  @*Edit one item*@
+  <div id="myModal2" class="modal2">
+
+  <!-- Modal content -->
+  <div class="modal-content2">
+    <span class="close2" onclick="closeForm2()">&times;</span>
+    <form>
+        <input placeholder="Item name..." id="itemName2"/>
+        <label for="categoryList2">Category: </label>
+        <select name="categoryList2" id="categoryList2">
+            
+        </select>
+
+        <label for="unitList">Unit: </label>
+        <select name="unitList" id="unitList2">
+            <option value="1" id="unit1">Kom</option>
+            <option value="2" id="unit2">kg</option>
+            <option value="3" id="unit3">Lit</option>
+
+        </select>
+
+        <input placeholder="Price..." id="price2"/>
+
+        <input class="itemForm-input" type="button" value="Edit" id="editButton" />
+
+
+    </form>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+window.onclick = function(event) {
+    modal = document.getElementById("myModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function openForm() {
+    document.getElementById("myModal").style.display = "block";
+    
+}
+function closeForm() {
+      document.getElementById("myModal").style.display = "none";
+      document.getElementById("itemName").value="";
+        
+}
+function openForm2(id,r) {
+    var i = r.parentNode.parentNode.rowIndex;
+
+    document.getElementById("myModal2").style.display = "block";
+    axios.get(`/api/item/${id}`).then(response=>(console.log(response.data),
+        document.getElementById("itemName2").value = response.data.itemName,
+        document.getElementById("price2").value=response.data.price,
+        setSelected(response.data.category.categoryId,response.data.unit.unitId),
+        document.getElementById("editButton").setAttribute("onclick",`editItem(${id},${i})`)))
+}
+function setSelected(categoryValue,unitValue) {
+    let category=document.getElementById(`category${categoryValue}`);
+    category.selected = true;
+    let unit = document.getElementById(`unit${unitValue}`);
+    unit.selected = true;
+    //menu.value = categoryValue;
+    //var menu2=document.getElementById("unitList2");
+    //menu2.value = unitValue;
+
+}
+function closeForm2() {
+      document.getElementById("myModal2").style.display = "none";
+}
+function Delete(id,r) {
+    console.log("delete clik on ", id);
+    axios.delete(`/api/item/${id}`);
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("itemTable").deleteRow(i);
+}
+function fillCategory(categories) {
+    for (var i = 0; i < categories.length; i++) {
+        
+        var select = document.getElementById("categoryList");
+        var select2 = document.getElementById("categoryList2");
+        var select3 = document.getElementById("categoryList3");
+
+
+
+        var option=document.createElement("option");
+        var option2=document.createElement("option");
+        var option3=document.createElement("option");
+
+
+
+        var node = categories[i].categoryName;
+        var node2 = categories[i].categoryName;
+        var node3 = categories[i].categoryName;
+
+
+
+        option.innerHTML = node;
+        option2.innerHTML = node2;
+        option3.innerHTML = node3;
+
+
+
+        option.value = categories[i].categoryId;
+        option2.value = categories[i].categoryId;
+        option3.value = categories[i].categoryId;
+
+
+        option2.setAttribute("id", `category${categories[i].categoryId}`)
+
+        select.appendChild(option);
+        select2.appendChild(option2);
+        select3.appendChild(option3);
+
+
+
+    }
+}
+function fillItem(items) {
+    
+    let table = document.getElementById("itemTable");
+    for (var i = 0; i < items.length; i++) {
+        var tr = document.createElement("tr");
+        var itemName = document.createElement("td");
+        var categoryName = document.createElement("td");
+        var unitName = document.createElement("td");
+        var price = document.createElement("td");
+        var del=document.createElement("td");
+        var ed = document.createElement("td");
+
+        
+        itemName.innerHTML = items[i].itemName;
+        categoryName.innerHTML = items[i].category.categoryName;
+        unitName.innerHTML=items[i].unit.unitName;
+        price.innerHTML=items[i].price;
+        del.innerHTML=`<input type="button" value = "Delete" onClick="Delete(${items[i].itemId},this)">`;
+        ed.innerHTML=`<input type="button" value = "Edit" onClick="openForm2(${items[i].itemId},this)">`;
+        
+        tr.appendChild(itemName);
+        tr.appendChild(categoryName);
+        tr.appendChild(unitName);
+        tr.appendChild(price);
+        tr.appendChild(del);
+        tr.appendChild(ed);
+
+        table.appendChild(tr);
+    }
+
+}
+function addItem() {
+    let menu = document.getElementById("unitList");
+    let menu2 = document.getElementById("categoryList3");
+
+    let itemName = document.getElementById("itemName").value;
+    let categoryId = menu2.value;
+    let unitId = menu.value;
+    let price = document.getElementById("price").value;
+    
+
+    let item = {
+        ItemId:0,
+        ItemName:itemName,
+        CategoryId:Number(categoryId),
+        UnitId:Number(unitId),
+        Price:Number(price)
+    }
+    console.log(item);
+    axios.post("/api/item/additem", item).then(response=>(addOneItem(response.data),console.log(response.data)));
+    closeForm();
+
+
+
+}
+function editItem(id,i) {
+    console.log("edit clik on ", id);
+    let menu2 = document.getElementById("categoryList2");
+    let categoryId = menu2.value;
+    let menu = document.getElementById("unitList2");
+    let unitId = menu.value;
+    let category = menu2.options[menu2.selectedIndex].text;
+    let unit=menu.options[menu.selectedIndex].text;
+
+    let editedItem = {
+        "ItemId":id,
+        "ItemName":document.getElementById("itemName2").value,
+        "CategoryId":Number(categoryId),
+        "UnitId":Number(unitId),
+        "Price":document.getElementById("price2").value
+    }
+    axios.put(`/api/item/itemedit/`,editedItem);
+    console.log(editedItem);
+    document.getElementById("itemTable").rows[i].cells[0].innerHTML=document.getElementById("itemName2").value;
+    document.getElementById("itemTable").rows[i].cells[1].innerHTML = category;
+    document.getElementById("itemTable").rows[i].cells[2].innerHTML = unit;
+    document.getElementById("itemTable").rows[i].cells[3].innerHTML = document.getElementById("price2").value;
+
+    closeForm2();
+}
+function addOneItem(item) {
+    let table = document.getElementById("itemTable");
+    var tr = document.createElement("tr");
+        var itemName = document.createElement("td");
+        var categoryName = document.createElement("td");
+        var unitName = document.createElement("td");
+        var price = document.createElement("td");
+        var del=document.createElement("td");
+        var ed = document.createElement("td");
+
+        
+        itemName.innerHTML = item.itemName;
+        categoryName.innerHTML = item.category.categoryName;
+        unitName.innerHTML=item.unit.unitName;
+        price.innerHTML=item.price;
+        del.innerHTML=`<input type="button" value = "Delete" onClick="Delete(${item.itemId},this)">`;
+        ed.innerHTML=`<input type="button" value = "Edit" onClick="openForm2(${item.itemId},this)">`;
+        
+        tr.appendChild(itemName);
+        tr.appendChild(categoryName);
+        tr.appendChild(unitName);
+        tr.appendChild(price);
+        tr.appendChild(del);
+        tr.appendChild(ed);
+
+        table.appendChild(tr);
+}
+function filterTable() {
+  // Variables
+  let dropdown, table, rows, cells, category, filter;
+  dropdown = document.getElementById("categoryList");
+  table = document.getElementById("itemTable");
+  rows = table.getElementsByTagName("tr");
+  filter = dropdown.options[dropdown.selectedIndex].text;
+    console.log("filter: ", filter);
+  // Loops through rows and hides those with countries that don't match the filter
+  for (let row of rows) { // `for...of` loops through the NodeList
+    cells = row.getElementsByTagName("td");
+    category = cells[1] || null; // gets the 2nd `td` or nothing
+    // if the filter is set to 'All', or this is the header row, or 2nd `td` text matches filter
+    if (filter === "All" || !category || (filter === category.textContent)) {
+      row.style.display = ""; // shows this row
+    }
+    else {
+      row.style.display = "none"; // hides this row
+    }
+  }
+}
+axios.get("/api/item").then(response => (fillItem(response.data), console.log(response.data)));
+axios.get("/api/category").then(response => (fillCategory(response.data), console.log(response.data)));
+
+</script>
